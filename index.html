@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#fbe4ee">
+<title>For You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Caveat:wght@500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="hearts" aria-hidden="true"></div>
+
+<div class="topbar">
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="music">
+    <button id="musicBtn" class="icon-btn" aria-label="Play music" title="Play our song">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path class="i-play" d="M8 5v14l11-7z" fill="currentColor"/><path class="i-pause" d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg>
+    </button>
+    <button id="muteBtn" class="icon-btn" aria-label="Mute music" title="Mute">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z" fill="currentColor"/><path class="i-wave" d="M16 8.5a5 5 0 010 7M18.5 6a8.5 8.5 0 010 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path class="i-x" d="M16 9l5 6M21 9l-5 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<main id="deck">
+
+  <!-- 1 -->
+  <section class="slide s1 active" data-i="0" aria-label="A little message for you">
+    <div class="art">
+      <svg viewBox="0 0 240 200" class="svg-art" role="img" aria-label="A glowing envelope with a heart">
+        <defs>
+          <radialGradient id="glow1" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffb3cf" stop-opacity=".9"/><stop offset="1" stop-color="#ffb3cf" stop-opacity="0"/></radialGradient>
+          <linearGradient id="env" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff7f2"/><stop offset="1" stop-color="#ffe1ec"/></linearGradient>
+        </defs>
+        <circle cx="120" cy="105" r="95" fill="url(#glow1)" class="pulse"/>
+        <g class="bob">
+          <rect x="52" y="70" width="136" height="90" rx="12" fill="url(#env)" stroke="#f2a6c0" stroke-width="3"/>
+          <path d="M54 76l66 48 66-48" fill="none" stroke="#f2a6c0" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M120 62c-9-16-30-8-26 8 3 11 18 18 26 24 8-6 23-13 26-24 4-16-17-24-26-8z" fill="#ff6f9f" class="beat"/>
+        </g>
+      </svg>
+    </div>
+    <h1 class="script">Hey, my favourite person… <span class="heart">❤️</span></h1>
+    <p class="body">I know things haven't been okay between us, but there's something I've been wanting to tell you. I hope you'll take a few moments to hear me out.</p>
+    <button class="btn primary" data-next>Open My Heart ❤️</button>
+  </section>
+
+  <!-- 2 -->
+  <section class="slide s2" data-i="1" aria-label="I know I've hurt you">
+    <div class="art">
+      <svg viewBox="0 0 240 220" class="svg-art" role="img" aria-label="A little character looking sorry, holding a note">
+        <ellipse cx="120" cy="208" rx="60" ry="8" fill="#d9b8d9" opacity=".35"/>
+        <g class="bob">
+          <ellipse cx="82" cy="52" rx="14" ry="26" fill="#ffc4d8" transform="rotate(-14 82 52)"/>
+          <ellipse cx="158" cy="52" rx="14" ry="26" fill="#ffc4d8" transform="rotate(14 158 52)"/>
+          <ellipse cx="83" cy="55" rx="6" ry="16" fill="#ff9cbc" transform="rotate(-14 83 55)"/>
+          <ellipse cx="157" cy="55" rx="6" ry="16" fill="#ff9cbc" transform="rotate(14 157 55)"/>
+          <ellipse cx="120" cy="140" rx="64" ry="58" fill="#ffd3e3"/>
+          <ellipse cx="120" cy="108" rx="52" ry="46" fill="#ffd3e3"/>
+          <!-- eyes: sad -->
+          <ellipse cx="98" cy="112" rx="7" ry="9" fill="#5a3a58"/>
+          <ellipse cx="142" cy="112" rx="7" ry="9" fill="#5a3a58"/>
+          <circle cx="100" cy="108" r="2.6" fill="#fff"/><circle cx="144" cy="108" r="2.6" fill="#fff"/>
+          <path d="M86 96l18 5M154 96l-18 5" stroke="#5a3a58" stroke-width="3" stroke-linecap="round"/>
+          <ellipse cx="82" cy="128" rx="10" ry="6" fill="#ff9cbc" opacity=".55"/>
+          <ellipse cx="158" cy="128" rx="10" ry="6" fill="#ff9cbc" opacity=".55"/>
+          <path d="M108 134q12-8 24 0" fill="none" stroke="#5a3a58" stroke-width="3" stroke-linecap="round"/>
+          <path class="tear" d="M98 124c-4 6-4 9 0 10 4-1 4-4 0-10z" fill="#9ed8f5"/>
+          <!-- note -->
+          <g transform="rotate(-6 120 170)">
+            <rect x="86" y="150" width="68" height="44" rx="5" fill="#fffaf3" stroke="#e8b4cb" stroke-width="2.5"/>
+            <path d="M96 164h48M96 174h34M96 184h42" stroke="#e8b4cb" stroke-width="2.5" stroke-linecap="round"/>
+          </g>
+          <ellipse cx="82" cy="172" rx="11" ry="9" fill="#ffc4d8"/>
+          <ellipse cx="158" cy="172" rx="11" ry="9" fill="#ffc4d8"/>
+        </g>
+      </svg>
+    </div>
+    <h2 class="title">I know I've hurt you</h2>
+    <p class="body">I made mistakes, and there were times I didn't make you feel as appreciated as you deserve. I'm truly sorry.</p>
+    <p class="body">I'm not here to brush it aside or make it smaller than it was. What I did had consequences, and your feelings about it are completely valid.</p>
+    <div class="nav"><button class="btn ghost" data-prev>Back</button><button class="btn primary" data-next>Next</button></div>
+  </section>
+
+  <!-- 3 -->
+  <section class="slide s3" data-i="2" aria-label="You still mean everything to me">
+    <div class="art">
+      <svg viewBox="0 0 260 200" class="svg-art" role="img" aria-label="Two little characters leaning together with hearts">
+        <ellipse cx="130" cy="190" rx="90" ry="8" fill="#c9b3e6" opacity=".3"/>
+        <g class="bob">
+          <g>
+            <ellipse cx="96" cy="126" rx="42" ry="48" fill="#ffd3e3"/>
+            <ellipse cx="80" cy="76" rx="9" ry="20" fill="#ffc4d8" transform="rotate(-12 80 76)"/>
+            <ellipse cx="108" cy="76" rx="9" ry="20" fill="#ffc4d8" transform="rotate(12 108 76)"/>
+            <path d="M84 118q5 6 10 0M104 118q5 6 10 0" fill="none" stroke="#5a3a58" stroke-width="3" stroke-linecap="round"/>
+            <ellipse cx="78" cy="130" rx="8" ry="5" fill="#ff9cbc" opacity=".6"/>
+            <ellipse cx="116" cy="130" rx="8" ry="5" fill="#ff9cbc" opacity=".6"/>
+            <path d="M92 134q6 6 12 0" fill="none" stroke="#5a3a58" stroke-width="3" stroke-linecap="round"/>
+          </g>
+          <g>
+            <ellipse cx="166" cy="126" rx="42" ry="48" fill="#dccbf3"/>
+            <path d="M156 80q10-26 22 0z" fill="#c9b3e6"/>
+            <path d="M154 118q5 6 10 0M174 118q5 6 10 0" fill="none" stroke="#5a3a58" stroke-width="3" stroke-linecap="round"/>
+            <ellipse cx="148" cy="130" rx="8" ry="5" fill="#ff9cbc" opacity=".6"/>
+            <ellipse cx="186" cy="130" rx="8" ry="5" fill="#ff9cbc" opacity=".6"/>
+            <path d="M162 134q6 6 12 0" fill="none" stroke="#5a3a58" stroke-width="3" stroke-linecap="round"/>
+          </g>
+          <path d="M131 92c-6-11-21-6-18 6 2 8 12 12 18 17 6-5 16-9 18-17 3-12-12-17-18-6z" fill="#ff6f9f" class="beat"/>
+        </g>
+        <path class="mini-h h1" d="M40 60c-3-5-10-3-9 3 1 4 6 6 9 9 3-3 8-5 9-9 1-6-6-8-9-3z" fill="#ffb3cf"/>
+        <path class="mini-h h2" d="M220 50c-3-5-10-3-9 3 1 4 6 6 9 9 3-3 8-5 9-9 1-6-6-8-9-3z" fill="#d6c2f0"/>
+      </svg>
+    </div>
+    <h2 class="title">You still mean everything to me</h2>
+    <p class="quote">I know things aren't perfect right now, but my feelings for you haven't disappeared. I still love you, and I always will.</p>
+    <div class="nav"><button class="btn ghost" data-prev>Back</button><button class="btn primary" data-next>Next</button></div>
+  </section>
+
+  <!-- 4 -->
+  <section class="slide s4" data-i="3" aria-label="If only I could turn back time">
+    <div class="art">
+      <svg viewBox="0 0 260 200" class="svg-art" role="img" aria-label="Floating memory photos around a clock">
+        <g class="bob">
+          <g transform="rotate(-10 62 90)"><rect x="30" y="56" width="64" height="76" rx="5" fill="#fffaf3" stroke="#e8b4cb" stroke-width="2"/><rect x="37" y="63" width="50" height="46" rx="3" fill="#ffd3e3"/><path d="M62 98c-7-8-17-3-14 5 2 5 9 8 14 12 5-4 12-7 14-12 3-8-7-13-14-5z" fill="#ff8fb3"/></g>
+          <g transform="rotate(9 198 96)"><rect x="166" y="62" width="64" height="76" rx="5" fill="#fffaf3" stroke="#d6c2f0" stroke-width="2"/><rect x="173" y="69" width="50" height="46" rx="3" fill="#e6d9f7"/><circle cx="198" cy="92" r="11" fill="#fff3b8"/><path d="M180 112q18-16 36 0" fill="none" stroke="#c9b3e6" stroke-width="3"/></g>
+          <circle cx="130" cy="100" r="40" fill="#fffaf3" stroke="#e8b4cb" stroke-width="4"/>
+          <g stroke="#c98fb0" stroke-width="2.5" stroke-linecap="round"><path d="M130 66v6M130 128v6M96 100h6M158 100h6"/></g>
+          <path d="M130 100V78" stroke="#5a3a58" stroke-width="4" stroke-linecap="round"/>
+          <path class="hand" d="M130 100l-18 10" stroke="#ff6f9f" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="130" cy="100" r="4.5" fill="#5a3a58"/>
+          <path d="M96 66a46 46 0 00-12 14" fill="none" stroke="#ff6f9f" stroke-width="3" stroke-linecap="round"/><path d="M82 72l2 10 9-5" fill="none" stroke="#ff6f9f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <circle class="sparkle sp1" cx="46" cy="34" r="3" fill="#ffd1e1"/><circle class="sparkle sp2" cx="222" cy="34" r="3" fill="#d6c2f0"/><circle class="sparkle sp3" cx="130" cy="28" r="2.5" fill="#fff0a8"/>
+      </svg>
+    </div>
+    <h2 class="title">If only I could turn back time</h2>
+    <p class="body">I wish I could undo the things that hurt you. I can't, and I know words alone can't change the past.</p>
+    <p class="body">So I don't want to just promise. I want to show you, in the small everyday things, consistently, over time.</p>
+    <div class="nav"><button class="btn ghost" data-prev>Back</button><button class="btn primary" data-next>Next</button></div>
+  </section>
+
+  <!-- 5 -->
+  <section class="slide s5" data-i="4" aria-label="Just one more chance">
+    <div class="art">
+      <svg viewBox="0 0 240 190" class="svg-art" role="img" aria-label="A big glowing heart held in two small hands">
+        <defs><radialGradient id="glow5" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ff9cbc" stop-opacity=".85"/><stop offset="1" stop-color="#ff9cbc" stop-opacity="0"/></radialGradient></defs>
+        <circle cx="120" cy="86" r="86" fill="url(#glow5)" class="pulse"/>
+        <path class="beat" d="M120 142C70 104 52 82 56 58c3-20 28-28 44-14 8 7 14 15 20 22 6-7 12-15 20-22 16-14 41-6 44 14 4 24-14 46-64 84z" fill="#ff6f9f"/>
+        <path d="M84 56c-6 2-10 8-9 15" stroke="#fff" stroke-width="5" stroke-linecap="round" fill="none" opacity=".55"/>
+        <path d="M54 150c18-18 36-12 44-4M186 150c-18-18-36-12-44-4" stroke="#ffc4d8" stroke-width="16" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+    <h2 class="title">Just one more chance</h2>
+    <div class="letter">
+      <p>I'm not asking you to forget everything that happened. I'm only asking you to give me one more chance to show you that I can do better.</p>
+      <p>I want to understand you better, respect your feelings, communicate more openly, and become someone who makes you feel safe, appreciated, and loved.</p>
+      <p>I promise to work on the things that hurt you, not just for a day, but consistently.</p>
+    </div>
+    <div class="nav"><button class="btn ghost" data-prev>Back</button><button class="btn primary" data-next>Next</button></div>
+  </section>
+
+  <!-- 6 -->
+  <section class="slide s6" data-i="5" aria-label="Your decision matters">
+    <div class="art">
+      <svg viewBox="0 0 240 190" class="svg-art" role="img" aria-label="A heart resting on open hands with a gentle glow">
+        <defs><radialGradient id="glow6" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#d6c2f0" stop-opacity=".9"/><stop offset="1" stop-color="#d6c2f0" stop-opacity="0"/></radialGradient></defs>
+        <circle cx="120" cy="90" r="84" fill="url(#glow6)" class="pulse"/>
+        <g class="bob">
+          <path d="M120 112c-30-22-40-35-37-48 2-12 17-16 26-8 4 4 8 8 11 12 3-4 7-8 11-12 9-8 24-4 26 8 3 13-7 26-37 48z" fill="#ff9cbc"/>
+          <path d="M44 138c24 22 54 28 76 22 22 6 52 0 76-22-26 6-52-2-76-2s-50 8-76 2z" fill="#ffd3e3" stroke="#f2a6c0" stroke-width="3" stroke-linejoin="round"/>
+        </g>
+      </svg>
+    </div>
+    <h2 class="title">Your decision matters</h2>
+    <div class="letter">
+      <p>I want you in my life, and I would love the opportunity to fix what I've broken. But I also want you to know that I respect your decision, whatever it may be.</p>
+      <p>I don't want you to say yes because you feel guilty or pressured. I want your answer to come from your heart.</p>
+    </div>
+    <div class="nav"><button class="btn ghost" data-prev>Back</button><button class="btn primary" data-next>Next</button></div>
+  </section>
+
+  <!-- 7 -->
+  <section class="slide s7" data-i="6" aria-label="The final question">
+    <div id="askView">
+      <div class="art">
+        <svg viewBox="0 0 260 200" class="svg-art" role="img" aria-label="Two little characters under a glowing heart">
+          <defs><radialGradient id="glow7" cx="50%" cy="40%" r="55%"><stop offset="0" stop-color="#ffb3cf" stop-opacity=".95"/><stop offset="1" stop-color="#ffb3cf" stop-opacity="0"/></radialGradient></defs>
+          <circle cx="130" cy="70" r="82" fill="url(#glow7)" class="pulse"/>
+          <path class="beat" d="M130 100c-26-19-34-30-31-41 2-10 14-13 22-7 4 3 7 7 9 10 2-3 5-7 9-10 8-6 20-3 22 7 3 11-5 22-31 41z" fill="#ff6f9f"/>
+          <g class="bob">
+            <ellipse cx="102" cy="150" rx="34" ry="38" fill="#ffd3e3"/>
+            <ellipse cx="90" cy="116" rx="7" ry="16" fill="#ffc4d8" transform="rotate(-10 90 116)"/>
+            <ellipse cx="112" cy="116" rx="7" ry="16" fill="#ffc4d8" transform="rotate(10 112 116)"/>
+            <ellipse cx="92" cy="146" rx="4" ry="5" fill="#5a3a58"/><ellipse cx="114" cy="146" rx="4" ry="5" fill="#5a3a58"/>
+            <path d="M98 158q4 4 8 0" fill="none" stroke="#5a3a58" stroke-width="2.5" stroke-linecap="round"/>
+            <ellipse cx="158" cy="150" rx="34" ry="38" fill="#dccbf3"/>
+            <path d="M150 114q8-20 16 0z" fill="#c9b3e6"/>
+            <ellipse cx="148" cy="146" rx="4" ry="5" fill="#5a3a58"/><ellipse cx="170" cy="146" rx="4" ry="5" fill="#5a3a58"/>
+            <path d="M154 158q4 4 8 0" fill="none" stroke="#5a3a58" stroke-width="2.5" stroke-linecap="round"/>
+          </g>
+          <ellipse cx="130" cy="192" rx="80" ry="6" fill="#c9b3e6" opacity=".3"/>
+        </svg>
+      </div>
+      <h2 class="title big">Will you give me one more chance to make things right? ❤️</h2>
+      <p class="body soft">Take all the time you need. Either answer is okay.</p>
+      <div class="answers">
+        <button class="btn choice" data-answer="YES">YES ❤️<small>I want to give us another chance</small></button>
+        <button class="btn choice" data-answer="NO">NO<small>I need to follow my heart</small></button>
+      </div>
+      <button class="btn ghost small-back" data-prev>Back</button>
+    </div>
+
+    <div id="confirmView" hidden>
+      <h2 class="title" id="confirmTitle"></h2>
+      <p class="body soft" id="confirmText"></p>
+      <label class="field">
+        <span>Anything you'd like to tell me? (optional)</span>
+        <textarea id="note" maxlength="1000" rows="4" placeholder="Write whatever you feel. You don't have to."></textarea>
+      </label>
+      <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
+      <p class="error" id="errorMsg" role="alert" hidden></p>
+      <div class="nav">
+        <button class="btn ghost" id="changeBtn">Change my answer</button>
+        <button class="btn primary" id="sendBtn">Send my answer</button>
+      </div>
+    </div>
+
+    <div id="doneView" hidden>
+      <div class="art"><svg viewBox="0 0 200 140" class="svg-art small" aria-hidden="true"><path class="beat" d="M100 120C60 90 46 72 49 53c2-16 22-22 35-11 6 5 11 12 16 18 5-6 10-13 16-18 13-11 33-5 35 11 3 19-11 37-51 67z" fill="#ff9cbc"/></svg></div>
+      <h2 class="title" id="doneTitle"></h2>
+      <p class="body" id="doneText"></p>
+      <p class="sent">Your answer has been delivered. ✓</p>
+    </div>
+  </section>
+</main>
+
+<audio id="song" src="assets/dooron-dooron.mp3" preload="none" loop></audio>
+<script src="script.js"></script>
+</body>
+</html>
